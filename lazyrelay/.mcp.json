@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lazyrelay": {
+      "type": "http",
+      "url": "https://mcp.lazyrelay.com/mcp"
+    }
+  }
+}

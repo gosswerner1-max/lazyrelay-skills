@@ -1,0 +1,14 @@
+{
+  "name": "lazyrelay",
+  "version": "0.1.1",
+  "description": "Write, grade, plan and schedule social posts with Claude through LazyRelay, then check which posts the platform confirmed live.",
+  "author": {
+    "name": "IPE Projects (Pty) Ltd",
+    "url": "https://lazyrelay.com"
+  },
+  "homepage": "https://lazyrelay.com/mcp/claude/",
+  "license": "MIT",
+  "privacyPolicyUrl": "https://lazyrelay.com/privacy/",
+  "keywords": ["social media", "scheduling", "mcp", "lazyrelay", "content"]
+}
+
