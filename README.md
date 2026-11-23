@@ -23,7 +23,7 @@ claude mcp add --transport http lazyrelay https://mcp.lazyrelay.com/mcp
 
 Full guide: https://lazyrelay.com/mcp/claude/
 
-No LazyRelay account yet? The Free plan is $0, gives 30 credits once at registration, and needs no card. It allows 10 posts waiting in the queue at a time, so plan small to start.
+No LazyRelay account yet? The Free plan is $0, gives you 30 new credits every month, and needs no card. It allows 10 posts waiting in the queue at a time, so plan small to start.
 
 ## What is inside
 

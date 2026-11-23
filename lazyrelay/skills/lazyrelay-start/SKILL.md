@@ -15,7 +15,7 @@ Tell the user in plain words what you are doing ("checking which social accounts
 - If the tool is missing or refuses, the connector is not set up. Tell the user, in these words:
   1. In the Claude app, open Customize, choose Connectors, press Add, then Add custom connector, and paste `https://mcp.lazyrelay.com/mcp`. You sign in with your LazyRelay account in the browser. Nothing to copy, no key.
   2. In Claude Code, run `claude mcp add --transport http lazyrelay https://mcp.lazyrelay.com/mcp`, then run `/mcp` and sign in.
-  3. No LazyRelay account yet? The Free plan is $0 and gives 30 credits once, at registration, and no card is needed with the free plan. Register at lazyrelay.com, connect one social account, then come back.
+  3. No LazyRelay account yet? The Free plan is $0 and gives you 30 new credits every month, and no card is needed with the free plan. Register at lazyrelay.com, connect one social account, then come back.
 - Never ask the user to type a password or a key into the chat. Sign in happens in the browser.
 
 ## Step 2: pick the brand

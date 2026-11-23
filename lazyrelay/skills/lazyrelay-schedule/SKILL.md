@@ -24,7 +24,7 @@ Tell the user in plain words what you are doing at each step, for example "check
    - Pinterest needs a board. Call `list_pinterest_boards` and ask which board.
    - TikTok needs creator settings checked first. Call `get_tiktok_creator_info` and use what it says. Do not guess privacy settings.
    - Call `get_platform_rules` for every platform. Check length, media and required fields. If the text is too long, do not cut it yourself: offer to shorten it, skip that platform, or stop.
-4. **Free plan check.** If the user is on the Free plan (30 credits once, 10 posts waiting in the queue at a time), count what you are about to schedule. Each post on each account is one credit. If it passes the queue limit or the credits left, say so before scheduling and let the user choose what to drop.
+4. **Free plan check.** If the user is on the Free plan (30 new credits every month, 10 posts waiting in the queue at a time), count what you are about to schedule. Each post on each account is one credit. If it passes the queue limit or the credits left, say so before scheduling and let the user choose what to drop.
 5. **Final check of the wording.** No dashes of any kind, no invented number or claim, hashtag count fits the platform. If something fails, report it and ask. Do not silently fix it.
 6. **Preview.** Show a table: platform, account, time, text, media. Ask: "Schedule this?"
 7. **After a clear yes**, call `schedule_post` (one post) or `schedule_posts` (several). Report each result with its post id and time. If three of five worked, say which three and which two, and why.
