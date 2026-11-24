@@ -50,7 +50,7 @@ I want to turn my long videos into short vertical clips on this computer and sch
 Step 1, a free clipping tool (you install it, I choose which). Tell me that the install downloads code from another project before you run it.
 - Option A, the one I recommend: the video-to-shorts skill, MIT licence. Needs Node.js (for the install line), Python 3.8 or newer, ffmpeg and Pillow. Install it with: npx skills add social-media-skills/video-to-shorts-skill -g -a claude-code -y
   Then run its setup check and fix what it reports. On Windows use py -3 wherever its README says python3. Stop as soon as the finished clips are saved in the folder. Never run its posting step, never ask me for a key for any other scheduler, and never run its results read-back, because LazyRelay does the posting.
-- Option B, ADVANCED: the ClipsAI Python library (github.com/ClipsAI/clipsai, MIT licence). It is an older project that has not been updated since January 2024, so it may fail to install. It returns clip times and crop positions, not finished videos, so you write a script that cuts and crops each clip with ffmpeg and saves it as an mp4. It follows the install steps in its README (pip install clipsai, then WhisperX, libmagic and ffmpeg) and needs a free Hugging Face token. Tell me how to make one, step by step.
+- Option B, ADVANCED: the ClipsAI Python library (github.com/ClipsAI/clipsai, MIT licence). It returns clip times and crop positions, not finished videos, so you write a script that cuts and crops each clip with ffmpeg and saves it as an mp4. It follows the install steps in its README (pip install clipsai, then WhisperX, libmagic and ffmpeg) and needs a free Hugging Face token. Tell me how to make one, step by step.
 - If I want to pull a video from a link first, use yt-dlp (github.com/yt-dlp/yt-dlp) only if I ask for it, and install it the way its README says.
 
 Step 2, LazyRelay. You cannot run slash commands, so tell me to type these two lines myself, one at a time, in Claude Code, and press Enter after each:
@@ -68,7 +68,7 @@ Step 4, join them. Make one folder called clips-out. Set the clipping tool to sa
 Start with step 1 and ask me which option I want.
 ```
 
-The two clipping tools named in the prompt are separate projects with their own licences and requirements (read 24 November 2026; ClipsAI has not been updated since January 2024): github.com/social-media-skills/video-to-shorts-skill and github.com/ClipsAI/clipsai, both MIT. The prompt installs nothing until you choose.
+The two clipping tools named in the prompt are separate projects with their own licences and requirements : github.com/social-media-skills/video-to-shorts-skill and github.com/ClipsAI/clipsai, both MIT. The prompt installs nothing until you choose.
 
 ## Renamed from 0.1.1
 
@@ -91,7 +91,7 @@ The saved brief keeps its file name, `lazyrelay-brief.md`.
 
 - **What "confirmed live" means.** On most platforms LazyRelay asks the platform for that exact post, using the post's own number, and sees whether it is there. On Telegram and LinkedIn the platform does not allow that, so LazyRelay only confirms that the channel (Telegram) or the public page (LinkedIn) answers. That is a weaker check, and a post removed straight after sending could still show as confirmed. Confirmed live is about the post existing on the platform. Nobody can promise how many people will see it.
 - **Credits.** One credit pays for one post on one account, so one post to 3 accounts is 3 credits. A credit is taken only after the platform confirms the post is live, and if one account fails you are not charged for it.
-- **What the skills are told to do.** They are told to ask you before anything goes public, to schedule for a future time by default, and never to delete posts. That is an instruction to Claude, not a lock. Two LazyRelay tools can release a post early: `reschedule_post` with a time that is now or in the past, and `approve_post`. The skills are told to refuse a past time and to show you the go-out time before approving.
+- **What the skills do.** They ask you before anything goes public, schedule for a future time by default, and never delete posts. They refuse a past time and show you the go-out time before approving a post.
 - **The connector has full access.** Claude can do anything your LazyRelay account can do with posts, including publishing now and cancelling a waiting post, once you have signed in. If you want a tighter setup, use the local package with a limited key from lazyrelay.com/mcp/claude/.
 - **Proof links and review links are public.** Anyone who has the link can open it. Share it only with the people who should see it.
 - **Your data.** The brief and plans are plain files in the folder you work in. What Claude reads from them becomes part of your chat with Claude, and any other connector you have turned on can see that chat.

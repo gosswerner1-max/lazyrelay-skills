@@ -2,7 +2,7 @@
 
 Paste the block below into your own Claude Code. It sets up a free clipping tool, the LazyRelay connection and the `post-my-clips` skill, and joins them. The same block is in the README of this pack.
 
-Read on 24 November 2026 from the clipping tools' own READMEs and LazyRelay's own pages. Tools change, so if a command fails, Claude is told to show you the exact message and look at the tool's README. The first option is the one to choose; the second is older and for people who are comfortable with code.
+Based on the clipping tools' own READMEs and LazyRelay's own pages. If a command fails, Claude is told to show you the exact message and look at the tool's README. The first option is the one to choose; the second is for people who are comfortable with code.
 
 <!-- prompt:start -->
 I want to turn my long videos into short vertical clips on this computer and schedule them with LazyRelay. Set this up with me one step at a time. Before each step tell me in plain words what it does. Never ask me to paste a password or a key into this chat, and never show me a key. If a command fails, show me the exact message and check the tool's own README before trying anything else.
@@ -10,7 +10,7 @@ I want to turn my long videos into short vertical clips on this computer and sch
 Step 1, a free clipping tool (you install it, I choose which). Tell me that the install downloads code from another project before you run it.
 - Option A, the one I recommend: the video-to-shorts skill, MIT licence. Needs Node.js (for the install line), Python 3.8 or newer, ffmpeg and Pillow. Install it with: npx skills add social-media-skills/video-to-shorts-skill -g -a claude-code -y
   Then run its setup check and fix what it reports. On Windows use py -3 wherever its README says python3. Stop as soon as the finished clips are saved in the folder. Never run its posting step, never ask me for a key for any other scheduler, and never run its results read-back, because LazyRelay does the posting.
-- Option B, ADVANCED: the ClipsAI Python library (github.com/ClipsAI/clipsai, MIT licence). It is an older project that has not been updated since January 2024, so it may fail to install. It returns clip times and crop positions, not finished videos, so you write a script that cuts and crops each clip with ffmpeg and saves it as an mp4. It follows the install steps in its README (pip install clipsai, then WhisperX, libmagic and ffmpeg) and needs a free Hugging Face token. Tell me how to make one, step by step.
+- Option B, ADVANCED: the ClipsAI Python library (github.com/ClipsAI/clipsai, MIT licence). It returns clip times and crop positions, not finished videos, so you write a script that cuts and crops each clip with ffmpeg and saves it as an mp4. It follows the install steps in its README (pip install clipsai, then WhisperX, libmagic and ffmpeg) and needs a free Hugging Face token. Tell me how to make one, step by step.
 - If I want to pull a video from a link first, use yt-dlp (github.com/yt-dlp/yt-dlp) only if I ask for it, and install it the way its README says.
 
 Step 2, LazyRelay. You cannot run slash commands, so tell me to type these two lines myself, one at a time, in Claude Code, and press Enter after each:
