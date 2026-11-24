@@ -30,7 +30,7 @@ No LazyRelay account yet? The Free plan is $0, gives you 30 new credits every mo
 | Skill | Use it when | LazyRelay tools it uses |
 |---|---|---|
 | `get-started` | You are new, or do not know what to post. Saves a short brief | `list_connected_accounts`, `list_workspaces` |
-| `find-post-ideas` | You do not know what to post, or want ideas from what people discussed in the last 30 days. It searches the public web, shows 5 to 8 topics with real source links, then turns the ones you pick into post ideas. It does not log in anywhere and does not schedule | none (uses your own Claude's web search, or links you paste) |
+| `find-post-ideas` | You do not know what to post, or want ideas from what was published and discussed in the last 30 days. It searches the public web (articles and open forum pages, not logged-in social feeds), shows up to 8 topics with real source links and says plainly when it finds little, then turns the ones you pick into post ideas. It does not log in anywhere and does not schedule | none (uses your own Claude's web search, or links you paste) |
 | `write-a-post` | You want one post for one platform | `get_platform_rules` |
 | `grade-my-post` | You have a draft and want an honest score and three fixes | `get_platform_rules` |
 | `plan-my-week` | You have one idea and want a week of posts | `list_posting_slots`, `get_next_free_slot`, `get_platform_rules` |
