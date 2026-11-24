@@ -68,7 +68,7 @@ Step 4, join them. Make one folder called clips-out. Set the clipping tool to sa
 Start with step 1 and ask me which option I want.
 ```
 
-The two clipping tools named in the prompt are separate projects with their own licences and requirements : github.com/social-media-skills/video-to-shorts-skill and github.com/ClipsAI/clipsai, both MIT. The prompt installs nothing until you choose.
+The two clipping tools named in the prompt are separate projects with their own licences and requirements: github.com/social-media-skills/video-to-shorts-skill and github.com/ClipsAI/clipsai, both MIT. The prompt installs nothing until you choose.
 
 ## Renamed from 0.1.1
 
@@ -89,14 +89,14 @@ The saved brief keeps its file name, `lazyrelay-brief.md`.
 
 ## Things to know
 
-- **What "confirmed live" means.** On most platforms LazyRelay asks the platform for that exact post, using the post's own number, and sees whether it is there. On Telegram and LinkedIn the platform does not allow that, so LazyRelay only confirms that the channel (Telegram) or the public page (LinkedIn) answers. That is a weaker check, and a post removed straight after sending could still show as confirmed. Confirmed live is about the post existing on the platform. Nobody can promise how many people will see it.
+- **What "confirmed live" means.** On most platforms LazyRelay asks the platform for that exact post, using the post's own number, and sees whether it is there. On Telegram and LinkedIn the platform does not allow that, so LazyRelay only confirms that the channel (Telegram) or the public page (LinkedIn) answers. Confirmed live is about the post existing on the platform. Nobody can promise how many people will see it.
 - **Credits.** One credit pays for one post on one account, so one post to 3 accounts is 3 credits. A credit is taken only after the platform confirms the post is live, and if one account fails you are not charged for it.
 - **What the skills do.** They ask you before anything goes public, schedule for a future time by default, and never delete posts. They refuse a past time and show you the go-out time before approving a post.
 - **The connector has full access.** Claude can do anything your LazyRelay account can do with posts, including publishing now and cancelling a waiting post, once you have signed in. If you want a tighter setup, use the local package with a limited key from lazyrelay.com/mcp/claude/.
 - **Proof links and review links are public.** Anyone who has the link can open it. Share it only with the people who should see it.
 - **Your data.** The brief and plans are plain files in the folder you work in. What Claude reads from them becomes part of your chat with Claude, and any other connector you have turned on can see that chat.
 - **Uploads.** `post-my-clips` uploads each clip with your own API key. LazyRelay deletes an upload after the post that uses it has been sent, and after 7 days if no post uses it. LazyRelay is a posting service and does not keep a file library.
-- **Checked on 22 November 2026** (the clip skill and its prompt on 24 November 2026) against the live LazyRelay site. Plans and tools change. If something here is out of date, tell us on this repository's Issues page or email support@lazyrelay.com.
+- **Questions.** Open an issue on this repository or email support@lazyrelay.com.
 
 ## Licence
 
