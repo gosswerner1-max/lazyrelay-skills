@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-check-live
+name: is-it-live
 description: Use after the scheduled time, when the user asks "did it go out", "is it live" or wants proof for a client. Lists the posts with their status and whether LazyRelay confirmed each one live, explains what that check means on each platform, and gives the public proof link for confirmed posts.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-start
+name: get-started
 description: Use when someone wants to start posting with LazyRelay, says they do not know what to post, or has just installed this pack. Checks the LazyRelay connection, shows the connected accounts and brands, and saves a short brief that the other skills read.
 ---
 
@@ -38,4 +38,4 @@ Write `lazyrelay-brief.md` in the current folder with these headings: Business, 
 
 ## Step 5: next step
 
-Offer one next step: write a first post with `lazyrelay-write-post`, or plan a week with `lazyrelay-plan-week`. Do not offer both and do not start without a yes.
+Offer one next step: write a first post with `write-a-post`, or plan a week with `plan-my-week`. Do not offer both and do not start without a yes.

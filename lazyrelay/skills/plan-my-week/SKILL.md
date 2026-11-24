@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-plan-week
+name: plan-my-week
 description: Use when the user has one idea, article or announcement and wants a week of posts from it. Builds a plan with one post per posting slot across the platforms they choose, using their LazyRelay posting slots, and saves it to week-plan.md. Does not schedule anything.
 ---
 
@@ -31,4 +31,4 @@ Make a table: day, time, platform, angle, hook, one call to action, media needed
 
 ## Save and hand over
 
-Save the table to `week-plan.md` in the current folder. Show it. Ask which posts to write first. Writing is the job of `lazyrelay-write-post` and scheduling is the job of `lazyrelay-schedule`. Do not start either without a yes.
+Save the table to `week-plan.md` in the current folder. Show it. Ask which posts to write first. Writing is the job of `write-a-post` and scheduling is the job of `schedule-a-post`. Do not start either without a yes.

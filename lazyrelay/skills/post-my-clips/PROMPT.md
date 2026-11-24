@@ -1,6 +1,6 @@
 # Ready-to-paste prompt: clips to LazyRelay
 
-Paste the block below into your own Claude Code. It sets up a free clipping tool, the LazyRelay connection and the `lazyrelay-clip` skill, and joins them. The same block is in the README of this pack.
+Paste the block below into your own Claude Code. It sets up a free clipping tool, the LazyRelay connection and the `post-my-clips` skill, and joins them. The same block is in the README of this pack.
 
 Checked on 24 November 2026 against the clipping tools' own READMEs and LazyRelay's own pages. Tools change, so if a command fails, Claude is told to show you the exact message and look at the tool's README.
 
@@ -20,7 +20,7 @@ Then check the connection with /mcp. If lazyrelay is not listed, run: claude mcp
 
 Step 3, the upload key. The clip upload uses my own LazyRelay API key. Tell me to open More, then API Keys in my LazyRelay dashboard, create a key with the Safe or Full setting, and save it on my computer in an environment variable named LAZYRELAY_API_KEY, by myself, without showing it to you.
 
-Step 4, join them. Make one folder called clips-out. Set the clipping tool to save its finished clip files there. When I say "clips are ready", run the lazyrelay-clip skill on clips-out: check each file, upload it with my key, write a caption for each platform from what I tell you about the clip, show me one table with the clip, platform, account, time and caption, and wait for my clear yes before anything is scheduled. Later, when I ask, run lazyrelay-check-live to show which posts LazyRelay confirmed live.
+Step 4, join them. Make one folder called clips-out. Set the clipping tool to save its finished clip files there. When I say "clips are ready", run the post-my-clips skill (typed as /lazyrelay:post-my-clips) on clips-out: check each file, upload it with my key, write a caption for each platform from what I tell you about the clip, show me one table with the clip, platform, account, time and caption, and wait for my clear yes before anything is scheduled. Later, when I ask, run is-it-live (typed as /lazyrelay:is-it-live) to show which posts LazyRelay confirmed live.
 
 Start with step 1 and ask me which option I want.
 <!-- prompt:end -->

@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-clip
+name: post-my-clips
 description: Use when the user already has short video clip files (made by any clipping tool on their own computer) and wants them scheduled with LazyRelay. Checks each clip file, uploads it through the user's own LazyRelay API key, writes a caption per platform, shows a table and waits for a clear yes, schedules one post per clip per connected account, and later reads back which posts LazyRelay confirmed live.
 ---
 
@@ -78,4 +78,4 @@ Show one table: clip file, length, platform, account, time (with time zone), cap
 
 ## Step 7: read back which posts are live
 
-Tell the user: "Ask me to run lazyrelay-check-live after the scheduled times." When they do, call `list_scheduled_posts` and show per post whether LazyRelay confirmed it live, using the same plain wording as `lazyrelay-check-live`: confirmed live means the platform reports the post exists. Do not poll in a loop and do not promise views.
+Tell the user: "Ask me to run is-it-live after the scheduled times." When they do, call `list_scheduled_posts` and show per post whether LazyRelay confirmed it live, using the same plain wording as `is-it-live`: confirmed live means the platform reports the post exists. Do not poll in a loop and do not promise views.

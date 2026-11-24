@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-client-review
+name: client-approval
 description: Use when a freelancer or agency wants a client to approve posts before they go out. Makes a LazyRelay approval link for a batch (the client needs no account), reads the client's feedback, and helps answer it. Approves a post only when the user says so.
 ---
 

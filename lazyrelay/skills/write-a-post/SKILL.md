@@ -1,6 +1,6 @@
 ---
-name: lazyrelay-write-post
-description: Use when the user asks for one social post for one platform ("write me a LinkedIn post about X"). Reads lazyrelay-brief.md, looks up the platform's own limits through LazyRelay, writes a hook, a short body and one call to action, and checks it with lazyrelay-grade-post before showing it.
+name: write-a-post
+description: Use when the user asks for one social post for one platform ("write me a LinkedIn post about X"). Reads lazyrelay-brief.md, looks up the platform's own limits through LazyRelay, writes a hook, a short body and one call to action, and checks it with grade-my-post before showing it.
 ---
 
 # LazyRelay write post
@@ -9,7 +9,7 @@ You write one finished post. The user gets one version, not three.
 
 ## Before you write
 
-1. Read `lazyrelay-brief.md` in the current folder. If it is missing, run `lazyrelay-start` first, without making a speech about it.
+1. Read `lazyrelay-brief.md` in the current folder. If it is missing, run `get-started` first, without making a speech about it.
 2. You need a topic and a platform. If either is missing, ask. Do not guess.
 3. Call the LazyRelay tool `get_platform_rules` for that platform and use its limits (length, media, links). Never rely on limits you remember; platforms change.
 
@@ -22,11 +22,11 @@ You write one finished post. The user gets one version, not three.
 
 ## Check, then show
 
-Run `lazyrelay-grade-post` on your draft. If the hook scores under 8 out of 10, rewrite the hook and grade again, at most twice. Then show:
+Run `grade-my-post` on your draft. If the hook scores under 8 out of 10, rewrite the hook and grade again, at most twice. Then show:
 
 - Platform
 - The post text
 - Score and one sentence on why it works
 - Whether it fits the platform's limits (from `get_platform_rules`)
 
-Ask: "Schedule it, edit it, or leave it?" Do not schedule anything yourself. Scheduling is the job of `lazyrelay-schedule`, and only after a clear yes.
+Ask: "Schedule it, edit it, or leave it?" Do not schedule anything yourself. Scheduling is the job of `schedule-a-post`, and only after a clear yes.

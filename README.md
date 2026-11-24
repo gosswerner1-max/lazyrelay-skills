@@ -29,20 +29,20 @@ No LazyRelay account yet? The Free plan is $0, gives you 30 new credits every mo
 
 | Skill | Use it when | LazyRelay tools it uses |
 |---|---|---|
-| `lazyrelay-start` | You are new, or do not know what to post. Saves a short brief | `list_connected_accounts`, `list_workspaces` |
-| `lazyrelay-write-post` | You want one post for one platform | `get_platform_rules` |
-| `lazyrelay-grade-post` | You have a draft and want an honest score and three fixes | `get_platform_rules` |
-| `lazyrelay-plan-week` | You have one idea and want a week of posts | `list_posting_slots`, `get_next_free_slot`, `get_platform_rules` |
-| `lazyrelay-schedule` | A post is approved and should be scheduled | `list_connected_accounts`, `get_platform_rules`, `list_pinterest_boards`, `get_tiktok_creator_info`, `get_next_free_slot`, `schedule_post`, `schedule_posts`, `list_scheduled_posts`; `publish_post_now` only if you ask for it in words |
-| `lazyrelay-check-live` | Later, you want to see what was confirmed live, or want proof for a client | `list_scheduled_posts`, `get_proof_link`; `reschedule_post` only for a future time you approve |
-| `lazyrelay-clip` | You already have short video clip files from a clipping tool on your own computer and want them scheduled. It uploads each clip with your own API key, schedules one post per clip per connected account after you say yes, and later shows which were confirmed live. It does not cut video | `list_connected_accounts`, `get_platform_rules`, `get_tiktok_creator_info`, `get_next_free_slot`, `list_posting_slots`, `schedule_post`, `schedule_posts`, `list_scheduled_posts` |
-| `lazyrelay-client-review` | A client should approve posts before they go out | `list_scheduled_posts`, `create_review_link`, `list_review_links`, `get_post_feedback`, `reply_to_post_feedback`, `approve_post`, `revoke_review_link`, `update_post` |
+| `get-started` | You are new, or do not know what to post. Saves a short brief | `list_connected_accounts`, `list_workspaces` |
+| `write-a-post` | You want one post for one platform | `get_platform_rules` |
+| `grade-my-post` | You have a draft and want an honest score and three fixes | `get_platform_rules` |
+| `plan-my-week` | You have one idea and want a week of posts | `list_posting_slots`, `get_next_free_slot`, `get_platform_rules` |
+| `schedule-a-post` | A post is approved and should be scheduled | `list_connected_accounts`, `get_platform_rules`, `list_pinterest_boards`, `get_tiktok_creator_info`, `get_next_free_slot`, `schedule_post`, `schedule_posts`, `list_scheduled_posts`; `publish_post_now` only if you ask for it in words |
+| `is-it-live` | Later, you want to see what was confirmed live, or want proof for a client | `list_scheduled_posts`, `get_proof_link`; `reschedule_post` only for a future time you approve |
+| `post-my-clips` | You already have short video clip files from a clipping tool on your own computer and want them scheduled. It uploads each clip with your own API key, schedules one post per clip per connected account after you say yes, and later shows which were confirmed live. It does not cut video | `list_connected_accounts`, `get_platform_rules`, `get_tiktok_creator_info`, `get_next_free_slot`, `list_posting_slots`, `schedule_post`, `schedule_posts`, `list_scheduled_posts` |
+| `client-approval` | A client should approve posts before they go out | `list_scheduled_posts`, `create_review_link`, `list_review_links`, `get_post_feedback`, `reply_to_post_feedback`, `approve_post`, `revoke_review_link`, `update_post` |
 
-A good first session: ask Claude to "help me start with LazyRelay", answer five questions, then ask for one post.
+A good first session: ask Claude to "help me start with LazyRelay" (or type `/lazyrelay:get-started`), answer five questions, then ask for one post. Every skill can be typed as `/lazyrelay:` followed by its name, for example `/lazyrelay:post-my-clips`, or you can just describe what you want.
 
 ## Clips: set up a clipping tool and LazyRelay with one prompt
 
-`lazyrelay-clip` is the posting step only. A clipping tool on your own computer cuts your long video into short vertical clips. LazyRelay schedules the finished clip files and shows which ones it could confirm are live. Paste this into your own Claude Code (it is also saved as `lazyrelay/skills/lazyrelay-clip/PROMPT.md`):
+`post-my-clips` is the posting step only. A clipping tool on your own computer cuts your long video into short vertical clips. LazyRelay schedules the finished clip files and shows which ones it could confirm are live. Paste this into your own Claude Code (it is also saved as `lazyrelay/skills/post-my-clips/PROMPT.md`):
 
 ```text
 I want to turn my long videos into short vertical clips on this computer and schedule them with LazyRelay. Set this up with me one step at a time. Before each step tell me in plain words what it does. Never ask me to paste a password or a key into this chat. If a command fails, show me the exact message and check the tool's own README before trying anything else.
@@ -60,12 +60,29 @@ Then check the connection with /mcp. If lazyrelay is not listed, run: claude mcp
 
 Step 3, the upload key. The clip upload uses my own LazyRelay API key. Tell me to open More, then API Keys in my LazyRelay dashboard, create a key with the Safe or Full setting, and save it on my computer in an environment variable named LAZYRELAY_API_KEY, by myself, without showing it to you.
 
-Step 4, join them. Make one folder called clips-out. Set the clipping tool to save its finished clip files there. When I say "clips are ready", run the lazyrelay-clip skill on clips-out: check each file, upload it with my key, write a caption for each platform from what I tell you about the clip, show me one table with the clip, platform, account, time and caption, and wait for my clear yes before anything is scheduled. Later, when I ask, run lazyrelay-check-live to show which posts LazyRelay confirmed live.
+Step 4, join them. Make one folder called clips-out. Set the clipping tool to save its finished clip files there. When I say "clips are ready", run the post-my-clips skill (typed as /lazyrelay:post-my-clips) on clips-out: check each file, upload it with my key, write a caption for each platform from what I tell you about the clip, show me one table with the clip, platform, account, time and caption, and wait for my clear yes before anything is scheduled. Later, when I ask, run is-it-live (typed as /lazyrelay:is-it-live) to show which posts LazyRelay confirmed live.
 
 Start with step 1 and ask me which option I want.
 ```
 
 The two clipping tools named in the prompt are separate projects with their own licences and requirements (checked 24 November 2026): github.com/social-media-skills/video-to-shorts-skill and github.com/ClipsAI/clipsai, both MIT. The prompt installs nothing until you choose.
+
+## Renamed from 0.1.1
+
+Version 0.2.0 dropped the "lazyrelay-" prefix from every skill name, because the plugin is already called `lazyrelay`. If you installed 0.1.1, update the pack and use the new names:
+
+| Old name (0.1.1) | New name |
+|---|---|
+| `lazyrelay-start` | `get-started` |
+| `lazyrelay-write-post` | `write-a-post` |
+| `lazyrelay-grade-post` | `grade-my-post` |
+| `lazyrelay-plan-week` | `plan-my-week` |
+| `lazyrelay-schedule` | `schedule-a-post` |
+| `lazyrelay-check-live` | `is-it-live` |
+| `lazyrelay-client-review` | `client-approval` |
+| `lazyrelay-clip` (new in 0.2.0) | `post-my-clips` |
+
+The saved brief keeps its file name, `lazyrelay-brief.md`.
 
 ## Things to know
 
@@ -75,7 +92,7 @@ The two clipping tools named in the prompt are separate projects with their own 
 - **The connector has full access.** Claude can do anything your LazyRelay account can do with posts, including publishing now and cancelling a waiting post, once you have signed in. If you want a tighter setup, use the local package with a limited key from lazyrelay.com/mcp/claude/.
 - **Proof links and review links are public.** Anyone who has the link can open it. Share it only with the people who should see it.
 - **Your data.** The brief and plans are plain files in the folder you work in. What Claude reads from them becomes part of your chat with Claude, and any other connector you have turned on can see that chat.
-- **Uploads.** `lazyrelay-clip` uploads each clip with your own API key. LazyRelay deletes an upload after the post that uses it has been sent, and after 7 days if no post uses it. LazyRelay is a posting service and does not keep a file library.
+- **Uploads.** `post-my-clips` uploads each clip with your own API key. LazyRelay deletes an upload after the post that uses it has been sent, and after 7 days if no post uses it. LazyRelay is a posting service and does not keep a file library.
 - **Checked on 22 November 2026** (the clip skill and its prompt on 24 November 2026) against the live LazyRelay site. Plans and tools change. If something here is out of date, tell us on this repository's Issues page or email support@lazyrelay.com.
 
 ## Licence

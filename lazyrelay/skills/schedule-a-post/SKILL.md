@@ -1,5 +1,5 @@
 ---
-name: lazyrelay-schedule
+name: schedule-a-post
 description: Use when the user has approved a post and wants it scheduled to one or more platforms with LazyRelay. Runs a last check, shows a preview, and only after a clear yes schedules it for a future time. Never publishes immediately and never deletes unless the user says so in words.
 ---
 
@@ -35,4 +35,4 @@ One credit pays for one post on one account. A credit is taken only after the pl
 
 ## After scheduling
 
-Tell the user: "I can check later which posts are confirmed live. Ask me to run lazyrelay-check-live after the scheduled time." Do not poll in a loop.
+Tell the user: "I can check later which posts are confirmed live. Ask me to run `is-it-live` after the scheduled time." Do not poll in a loop.

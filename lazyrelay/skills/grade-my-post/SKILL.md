@@ -1,6 +1,6 @@
 ---
-name: lazyrelay-grade-post
-description: Use when the user pastes a draft social post and asks if it is good, or when lazyrelay-write-post needs a quality check. Scores the draft out of 10 and lists the three fixes that would raise the score most. Never rewrites the post.
+name: grade-my-post
+description: Use when the user pastes a draft social post and asks if it is good, or when write-a-post needs a quality check. Scores the draft out of 10 and lists the three fixes that would raise the score most. Never rewrites the post.
 ---
 
 # LazyRelay grade post
