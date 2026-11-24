@@ -1,6 +1,6 @@
 {
   "name": "lazyrelay",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Write, grade, plan and schedule social posts with Claude through LazyRelay, then check which posts the platform confirmed live.",
   "author": {
     "name": "IPE Projects (Pty) Ltd",
