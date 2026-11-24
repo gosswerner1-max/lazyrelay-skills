@@ -1,7 +1,7 @@
 {
   "name": "lazyrelay",
-  "version": "0.2.0",
-  "description": "Write, grade, plan and schedule social posts with Claude through LazyRelay, then check which posts the platform confirmed live.",
+  "version": "0.3.0",
+  "description": "A free pack of nine skills to find post ideas, write, grade, plan and schedule social posts with Claude through LazyRelay, then check which posts the platform confirmed live.",
   "author": {
     "name": "IPE Projects (Pty) Ltd",
     "url": "https://lazyrelay.com"

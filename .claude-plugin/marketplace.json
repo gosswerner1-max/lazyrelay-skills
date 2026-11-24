@@ -1,6 +1,6 @@
 {
   "name": "lazyrelay-skills",
-  "description": "Free Claude skills for writing, grading, planning and scheduling social posts through LazyRelay, and for checking which posts were confirmed live.",
+  "description": "A free pack of nine skills for finding ideas, writing, grading, planning and scheduling social posts through LazyRelay, and for checking which posts were confirmed live.",
   "owner": {
     "name": "IPE Projects (Pty) Ltd"
   },
@@ -8,7 +8,7 @@
     {
       "name": "lazyrelay",
       "source": "./lazyrelay",
-      "description": "Free Claude skills that take you from an idea to a scheduled social post through LazyRelay, then show which posts it could confirm are live."
+      "description": "A free pack of nine skills that take you from finding an idea to a scheduled social post through LazyRelay, then show which posts it could confirm are live."
     }
   ]
 }
